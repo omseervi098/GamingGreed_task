@@ -8,8 +8,8 @@ function Vision() {
   return (
     <div className="vision">
       <div className="vision_head">
-        <div>Result-oriented</div>
-        <Image src={img5} alt=".." layout="fixed" ></Image>
+        <div className="vision_header">Result-oriented</div>
+        <div className="vision_img"><Image src={img5} alt=".."  ></Image></div>
         <p>performance campaign for every objective</p>
       </div>
       <div className="vision_cards_group">
