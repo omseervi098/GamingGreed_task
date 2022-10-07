@@ -9,7 +9,7 @@ function Vision() {
     <div className="vision">
       <div className="vision_head">
         <div>Result-oriented</div>
-        <Image src={img5} alt=".." width="360px"></Image>
+        <Image src={img5} alt=".." layout="fixed" ></Image>
         <p>performance campaign for every objective</p>
       </div>
       <div className="vision_cards_group">
