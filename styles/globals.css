@@ -369,6 +369,10 @@ footer{
   }
   .lead-capture-form{
     width: 90%;
+    margin-bottom: 0;
+  }
+  .section-1{
+    padding-bottom: 30px;
   }
   .vision{
     margin-top: 100px;
@@ -377,11 +381,14 @@ footer{
     padding-left: 0 !important;
   }
   .vision_head > .vision_header{
-    font-size: 3rem;
+    font-size: 2.7rem;
     margin-bottom: -50px !important;
   }
+  .vision_head > p{
+    font-size: 2rem;
+  }
   .vision_img{
-    width: 90%;
+    width: 80%;
     
   }
   .vision_cards_group{
