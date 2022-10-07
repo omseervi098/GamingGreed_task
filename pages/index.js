@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import styles from "../styles/Home.module.css";
 import Vision from "./components/Vision";
 import LeadCaptureform from "./components/LeadCaptureform";
-import Stats from "./components/stats";
+import Stats from "./components/Stats";
 import Partners from "./components/Partners";
 import Clients from "./components/Clients";
 import Reviews from "./components/Reviews";
