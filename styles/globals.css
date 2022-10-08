@@ -18,16 +18,20 @@ p{
   width: 100%;
   background:rgba(255, 255, 255, 0.8);
   display: flex;
-  justify-content: space-between;
+  justify-content:flex-start;
   align-items: center;
+  gap:10px;
   padding: 10px;
-  position: fixed;
-  
+  position: fixed; 
+  z-index: 1;
+}
+.menu{
+  display:none;
 }
 /* Vision */
 .section-1{
   width: 100%;
-  min-height: 100vh;
+  
   background: url('/Group 7444.png') ;
   background-size: 100%;
   opacity: 1;
@@ -105,7 +109,7 @@ p{
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content:space-around;
   gap: 10px;
   padding: 20px;
   
@@ -141,7 +145,7 @@ p{
 #submit-btn{
   width: 100%;
   height: 40px;
-  border: 1px solid #C7C7C7;
+  border: none;
   border-radius: 5px;
   padding: 2px;
   background-color: #126FED;
@@ -330,9 +334,13 @@ footer{
   padding:10px ;
   padding-left: 100px;
   font-weight: 900 !important;
+  background-color: #41414115;
 }
 /* Making it responsive for tablets and mobiles */
-@media screen and (max-width: 768px) {
+.get_started_btn{
+  display: none;
+}
+@media screen and (max-width: 820px) {
   .navbar{
     z-index: 1;
   }
@@ -362,7 +370,11 @@ footer{
   }
 
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 470px){
+  .menu{
+    display:block;
+    margin-top:0px;
+  }
   .vision_head >div{
     font-size: 3.3rem;
     margin-top: 10px;
@@ -406,8 +418,6 @@ footer{
     padding: 0px 0px;
     padding-top:30px;
     padding-bottom: 30px;
-
-
   }
   .partners_head,.clients_head,.reviews_head,.last_head{
     font-size: 2rem;
@@ -419,7 +429,6 @@ footer{
     grid-gap:40px;
   }
   .stats{
-    
     background-size: cover;
   }
   .reviews_container{
@@ -435,5 +444,29 @@ footer{
   width: 80%;
   margin: 0 auto;
   padding-left: 0 !important;
+ }
+ footer{
+  background-color: #41414115;
+  width: 100%;
+  text-align: center;
+ }
+ .get_started_btn{
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-decoration: none;
+ }
+ .get_started_btn  button{
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+  background-color: #126FED;
+  font: normal normal bold 1.2rem Mulish;  
+  letter-spacing: 0px;
+  color: #FFFFFF;
  }
 }

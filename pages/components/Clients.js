@@ -5,7 +5,7 @@ import img3 from "../../public/Mask Group 44@2x.png";
 function Clients() {
   const clients = [img1, img2, img3];
   return (
-    <div className="clients">
+    <div className="clients" id="client">
       <div className="clients_container">
         <div className="clients_head">Our Top Clients</div>
         <div className="clients_cards">

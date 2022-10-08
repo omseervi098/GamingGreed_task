@@ -1,9 +1,74 @@
 import Link from "next/link";
-// lead capture form
+// form validation
+function helperToShowError(input, message) {
+  var error = document.createElement("span");
+  error.innerHTML = message;
+  error.style.color = "red";
+  error.style.fontSize = "12px";
+  error.style.fontWeight = "bold";
+  if (input.nextSibling == null) {
+    input.parentNode.appendChild(error);
+  }else{
+    input.nextSibling.innerHTML = message;
+  }
+  //disappear error message after 1 seconds
+  setTimeout(function () {
+    input.parentNode.removeChild(error);
+  }, 2000);
+}
+function validateForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var appLink = document.getElementById("app-link").value;
+  var monthlyRevenue = document.getElementById("monthly-revenue").value;
+
+  if (name == "") {
+    helperToShowError(document.getElementById("name"), "Enter your Name");
+    return false;
+  }
+  if (email == "") {
+    helperToShowError(document.getElementById("email"), "Enter your Email");
+    return false;
+  }
+  if (phone == "") {
+    helperToShowError(document.getElementById("phone"), "Enter your Phone Number");
+    return false;
+  }
+  if (monthlyRevenue == "") {
+    helperToShowError(document.getElementById("monthly-revenue"), "Enter your Monthly Revenue");
+    return false;
+  }
+  //Validation for email
+  var emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+  if (!emailRegex.test(email)) {
+    helperToShowError(document.getElementById("email"), "Enter a valid Email");
+    return false;
+  }
+ 
+  //Validation for number with 91 country code
+  var phoneRegex = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
+  if (!phoneRegex.test(phone)) {
+    helperToShowError(document.getElementById("phone"), "Enter a valid Phone Number");
+    return false;
+  }
+  if(phone.length<= 10){
+    helperToShowError(document.getElementById("phone"), "Enter a valid Phone Number with country code");
+    return false;
+  }
+  //Validation for monthly revenue
+  var monthlyRevenueRegex = /^[0-9]+$/;
+  if (!monthlyRevenueRegex.test(monthlyRevenue)) {
+    helperToShowError(document.getElementById("monthly-revenue"), "Enter a valid Monthly Revenue");
+    return false;
+  }
+
+  return true;
+}
 function LeadCaptureform() {
   return (
-    <div className="lead-capture-form">
-      <form>
+    <div className="lead-capture-form" id="form">
+      <form onSubmit={validateForm} action="#">
         <div className="name-email">
           <div className="name">
             <label htmlFor="name">Name</label>
