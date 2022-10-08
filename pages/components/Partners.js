@@ -17,7 +17,7 @@ function Partners() {
           {partners.map((partner, idx) => {
             return (
               <div key={idx} className="partners_cards_img">
-                <Image src={partner} alt="partners-1" width={120}></Image>
+                <Image src={partner} alt="partners-1" ></Image>
               </div>
             );
           })}
