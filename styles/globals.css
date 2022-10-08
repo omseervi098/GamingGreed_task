@@ -28,7 +28,7 @@ p{
 .section-1{
   width: 100%;
   min-height: 100vh;
-  background: url('../public/Group\ 7444.png') ;
+  background: url('/Group\ 7444.png') ;
   background-size: 100%;
   opacity: 1;
   display: flex;
@@ -156,7 +156,7 @@ p{
 /* Form Section Ends */
 /* Section 2 Stats starts */
 .stats{
-  background: url('../public/2293632-04.png') ;
+  background: url('/2293632-04.png') ;
   color: white;
 
 }
@@ -210,7 +210,7 @@ p{
 /* Section 3 Top Partners ends*/
 /* Section 4 Top Clients starts */
 .clients{
-  background-image: url('../public/Mask\ Group\ 65.png');
+  background-image: url('/Mask\ Group\ 65.png');
   background-size: 100%;
   background-color: rgb(236, 240, 245);
 }
@@ -240,7 +240,7 @@ p{
 /* Section 5 Reviews starts */
 .reviews{
   margin-top: 30px;
-  background-image: url('../public/Icon awesome-quote-left.png');
+  background-image: url('/Icon awesome-quote-left.png');
   background-repeat: no-repeat;
 }
 .reviews_container{
