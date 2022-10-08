@@ -1,3 +1,37 @@
+
+# Gaming Greed Landing Page
+
+
+
+
+
+
+
+# Features 
+- Sticky Form 
+- Responsive Design supported in Tablet,Mobile,PC
+- Form Validation for phone number and email
+- Optimised Pages
+## Tech Stack
+
+**Client:** NextJs, CSS
+
+
+
+
+## Deployment
+
+Deployed on Vercel
+
+Link to Website : https://gaminggreed.vercel.app/
+
+
+## Screenshots
+
+### Desktop View
+![ScreenShot](https://raw.github.com/omseervi098/GamingGreed_task/master/public/1.png)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
