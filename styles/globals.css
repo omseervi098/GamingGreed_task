@@ -28,7 +28,7 @@ p{
 .section-1{
   width: 100%;
   min-height: 100vh;
-  background: url('/Group\ 7444.png') ;
+  background: url('/Group 7444.png') ;
   background-size: 100%;
   opacity: 1;
   display: flex;
@@ -399,9 +399,15 @@ footer{
     align-items: center;
   }
   .stats_container,.partners_container,.clients_container,.reviews_container{
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     padding-left: 0 !important;
+    padding-left:0;
+    padding: 0px 0px;
+    padding-top:30px;
+    padding-bottom: 30px;
+
+
   }
   .partners_head,.clients_head,.reviews_head,.last_head{
     font-size: 2rem;
@@ -413,7 +419,11 @@ footer{
     grid-gap:40px;
   }
   .stats{
+    
     background-size: cover;
+  }
+  .reviews_container{
+    width: 90%;
   }
   .partners_cards,.clients_cards{
     display: grid;
