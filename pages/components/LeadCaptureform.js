@@ -11,12 +11,13 @@ function helperToShowError(input, message) {
   }else{
     input.nextSibling.innerHTML = message;
   }
-  //disappear error message after 1 seconds
+  //disappear error message after 2.5 seconds
   setTimeout(function () {
     input.parentNode.removeChild(error);
-  }, 2000);
+  }, 2500);
 }
-function validateForm() {
+function validateForm(e) {
+  e.preventDefault();
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
   var phone = document.getElementById("phone").value;
@@ -45,17 +46,17 @@ function validateForm() {
     helperToShowError(document.getElementById("email"), "Enter a valid Email");
     return false;
   }
- 
-  //Validation for number with 91 country code
-  var phoneRegex = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
-  if (!phoneRegex.test(phone)) {
-    helperToShowError(document.getElementById("phone"), "Enter a valid Phone Number");
-    return false;
-  }
-  if(phone.length<= 10){
+ if(phone.length<= 10){
     helperToShowError(document.getElementById("phone"), "Enter a valid Phone Number with country code");
     return false;
   }
+  //Validation for number with 91 country code
+  var phoneRegex = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
+  if (!phoneRegex.test(phone)) {
+    helperToShowError(document.getElementById("phone"), "Enter a valid Phone Number with country code");
+    return false;
+  }
+  
   //Validation for monthly revenue
   var monthlyRevenueRegex = /^[0-9]+$/;
   if (!monthlyRevenueRegex.test(monthlyRevenue)) {
