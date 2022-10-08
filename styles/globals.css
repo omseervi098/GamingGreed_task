@@ -96,7 +96,7 @@ p{
 /* Form Section starts */
 .lead-capture-form{
   width: 35%;
-  height: 80%;
+  
   box-shadow: 0px 16px 50px #C7C7C75F;
   border-radius: 13px;
   background-color: white;
@@ -382,6 +382,11 @@ footer{
   .lead-capture-form{
     width: 90%;
     margin-bottom: 0;
+  }
+  .name-email{
+    display: flex;
+    flex-direction: column !important;
+    gap: 10px;
   }
   .section-1{
     padding-bottom: 30px;
